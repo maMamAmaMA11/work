@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты голосвания</title>
+    <style>
+        *{
+            background-color: #e6e6e6
+        }
+        h1{
+            background-color: inherit;
+        }
+        div{
+            background-color: rgb(155, 144, 150);
+            text-align: center;
+            width: 400px;
+            border: 3px solid black;
+            margin-top: 10%;
+            margin-left: 35%;
+        }
+        a{
+            color: #000;
+            margin-left: 60%;
+        }
+        a:hover{
+            color: #2f4f4f;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        {%for i in resultview%}
+            <h1>{{i.w1result}}</h1>
+            <h1>{{i.w2result}}</h1>
+            <h1>{{i.w3result}}</h1>
+            <h1>{{i.w4result}}</h1>
+        {%endfor%}
+    </div>
+    <a href="/">Назад</a>
+</body>
+</html>

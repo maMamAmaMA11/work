@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+        *{
+            background-color: #e6e6e6;
+        }
+        div{
+            margin: 100px 25%;
+        }
+        a{
+            color: #2f4f4f;
+            margin-right: 30px;
+        }
+        a:hover{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        {%if user.is_authenticated%}
+        <h3>Вы в аккаунте - {{user}}</h3>
+        <a href="login">Смена аккаунта</a>
+        {%endif%}
+        {%if not user.is_authenticated%}
+        <h3>Вы не вошли в аккаунт</h3>
+        <a href="login">Вход</a>
+        {%endif%}
+        <a href="register">Регистрация</a>
+        <a href="storage">Склады</a>
+        <a href="rangesort">Метод</a>
+        <a href="rangesortresult">Результаты метода</a>
+    </div>  
+</body>
+</html>
